@@ -1,0 +1,187 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  UDPSocket</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>class  <A HREF="#DOC.DOCU">UDPSocket</A></H2></H2><BLOCKQUOTE> UDP socket class</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=95>
+<param name=classes value="CSocket,MSocket.html,CCommunicatingSocket,MCommunicatingSocket.html,CUDPSocket,MUDPSocket.html">
+<param name=before value="M,M,M">
+<param name=after value="Md_SP,Md_,M">
+<param name=indent value="0,1,2">
+<param name=arrowdir value="down">
+</APPLET>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.5.1">UDPSocket</A></B>() throw(SocketException)
+<DD><I> Construct a UDP socket </I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.5.2">UDPSocket</A></B>(unsigned short localPort) throw(SocketException)
+<DD><I> Construct a UDP socket with the given local port </I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.5.3">UDPSocket</A></B>(const string &amp;localAddress, unsigned short localPort) throw(SocketException)
+<DD><I> Construct a UDP socket with the given local port and address </I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.5.4">disconnect</A></B>() throw(SocketException)
+<DD><I> Unset foreign address and port </I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.5.5">sendTo</A></B>(const void* buffer, int bufferLen, const string &amp;foreignAddress, unsigned short foreignPort) throw(SocketException)
+<DD><I> Send the given buffer as a UDP datagram to the specified address/port </I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.5.6">recvFrom</A></B>(void* buffer, int bufferLen, string &amp;sourceAddress, unsigned short &amp;sourcePort) throw(SocketException)
+<DD><I> Read read up to bufferLen bytes data from this socket.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.5.7">setMulticastTTL</A></B>(unsigned char multicastTTL) throw(SocketException)
+<DD><I> Set the multicast TTL </I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.5.8">joinGroup</A></B>(const string &amp;multicastGroup) throw(SocketException)
+<DD><I> Join the specified multicast group </I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.5.9">leaveGroup</A></B>(const string &amp;multicastGroup) throw(SocketException)
+<DD><I> Leave the specified multicast group </I>
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="CommunicatingSocket.html">CommunicatingSocket</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>void <B>connect</B>(const string &amp;foreignAddress, unsigned short foreignPort) throw(SocketException)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>void <B>send</B>(const void* buffer, int bufferLen) throw(SocketException)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>int <B>recv</B>(void* buffer, int bufferLen) throw(SocketException)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>string <B>getForeignAddress</B>() throw(SocketException)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>unsigned short <B>getForeignPort</B>() throw(SocketException)
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="Socket.html">Socket</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>string <B>getLocalAddress</B>() throw(SocketException)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>unsigned short <B>getLocalPort</B>() throw(SocketException)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>void <B>setLocalPort</B>(unsigned short localPort) throw(SocketException)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>void <B>setLocalAddressAndPort</B>(const string &amp;localAddress, unsigned short localPort = 0) throw(SocketException)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>static   void <B>cleanUp</B>() throw(SocketException)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>static   unsigned short <B>resolveService</B>(const string &amp;service, const string &amp;protocol = "tcp")
+</DL></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+UDP socket class</BLOCKQUOTE>
+<DL>
+
+<A NAME="UDPSocket"></A>
+<A NAME="DOC.5.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> UDPSocket() throw(SocketException)</B></TT>
+<DD>
+Construct a UDP socket
+
+<DL><DT><DT><B>Throws:</B><DD><B>SocketException</B>  thrown if unable to create UDP socket<BR><DD></DL><P>
+<A NAME="UDPSocket"></A>
+<A NAME="DOC.5.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> UDPSocket(unsigned short localPort) throw(SocketException)</B></TT>
+<DD>
+Construct a UDP socket with the given local port
+
+<DL><DT><DT><B>Throws:</B><DD><B>SocketException</B>  thrown if unable to create UDP socket<BR><DT><B>Parameters:</B><DD><B>localPort</B> -  local port
+<BR><DD></DL><P>
+<A NAME="UDPSocket"></A>
+<A NAME="DOC.5.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> UDPSocket(const string &amp;localAddress, unsigned short localPort) throw(SocketException)</B></TT>
+<DD>
+Construct a UDP socket with the given local port and address
+
+<DL><DT><DT><B>Throws:</B><DD><B>SocketException</B>  thrown if unable to create UDP socket<BR><DT><B>Parameters:</B><DD><B>localAddress</B> -  local address
+<BR><B>localPort</B> -  local port
+<BR><DD></DL><P>
+<A NAME="disconnect"></A>
+<A NAME="DOC.5.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void disconnect() throw(SocketException)</B></TT>
+<DD>
+Unset foreign address and port
+
+<DL><DT><DT><B>Throws:</B><DD><B>SocketException</B>  thrown if unable to disconnect UDP socket<BR><DT><B>Returns:</B><DD>  true if disassociation is successful
+<BR><DD></DL><P>
+<A NAME="sendTo"></A>
+<A NAME="DOC.5.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void sendTo(const void* buffer, int bufferLen, const string &amp;foreignAddress, unsigned short foreignPort) throw(SocketException)</B></TT>
+<DD>
+Send the given buffer as a UDP datagram to the
+specified address/port
+
+<DL><DT><DT><B>Throws:</B><DD><B>SocketException</B>  thrown if unable to send datagram<BR><DT><B>Parameters:</B><DD><B>buffer</B> -  buffer to be written
+<BR><B>bufferLen</B> -  number of bytes to write
+<BR><B>foreignAddress</B> -  address (IP address or name) to <!1><A HREF="CommunicatingSocket.html#DOC.2.2">send</A> to
+<BR><B>foreignPort</B> -  port number to <!1><A HREF="CommunicatingSocket.html#DOC.2.2">send</A> to
+<BR><DT><B>Returns:</B><DD>  true if send is successful
+<BR><DD></DL><P>
+<A NAME="recvFrom"></A>
+<A NAME="DOC.5.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int recvFrom(void* buffer, int bufferLen, string &amp;sourceAddress, unsigned short &amp;sourcePort) throw(SocketException)</B></TT>
+<DD>
+Read read up to bufferLen bytes data from this socket.  The given buffer
+is where the data will be placed
+
+<DL><DT><DT><B>Throws:</B><DD><B>SocketException</B>  thrown if unable to receive datagram<BR><DT><B>Parameters:</B><DD><B>buffer</B> -  buffer to receive data
+<BR><B>bufferLen</B> -  maximum number of bytes to receive
+<BR><B>sourceAddress</B> -  address of datagram source
+<BR><B>sourcePort</B> -  port of data source
+<BR><DT><B>Returns:</B><DD>  number of bytes received and -1 for error
+<BR><DD></DL><P>
+<A NAME="setMulticastTTL"></A>
+<A NAME="DOC.5.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void setMulticastTTL(unsigned char multicastTTL) throw(SocketException)</B></TT>
+<DD>
+Set the multicast TTL
+
+<DL><DT><DT><B>Throws:</B><DD><B>SocketException</B>  thrown if unable to set TTL<BR><DT><B>Parameters:</B><DD><B>multicastTTL</B> -  multicast TTL
+<BR><DD></DL><P>
+<A NAME="joinGroup"></A>
+<A NAME="DOC.5.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void joinGroup(const string &amp;multicastGroup) throw(SocketException)</B></TT>
+<DD>
+Join the specified multicast group
+
+<DL><DT><DT><B>Throws:</B><DD><B>SocketException</B>  thrown if unable to join group<BR><DT><B>Parameters:</B><DD><B>multicastGroup</B> -  multicast group address to join
+<BR><DD></DL><P>
+<A NAME="leaveGroup"></A>
+<A NAME="DOC.5.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void leaveGroup(const string &amp;multicastGroup) throw(SocketException)</B></TT>
+<DD>
+Leave the specified multicast group
+
+<DL><DT><DT><B>Throws:</B><DD><B>SocketException</B>  thrown if unable to leave group<BR><DT><B>Parameters:</B><DD><B>multicastGroup</B> -  multicast group address to leave
+<BR><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

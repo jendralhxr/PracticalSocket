@@ -1,0 +1,129 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  CommunicatingSocket</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>class  <A HREF="#DOC.DOCU">CommunicatingSocket</A></H2></H2><BLOCKQUOTE> Socket which is able to connect, send, and receive</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=125>
+<param name=classes value="CSocket,MSocket.html,CCommunicatingSocket,MCommunicatingSocket.html,CUDPSocket,MUDPSocket.html,CTCPSocket,MTCPSocket.html">
+<param name=before value="M,M,M|_,Mr_">
+<param name=after value="Md_,M,M,M">
+<param name=indent value="0,1,1,1">
+<param name=arrowdir value="down">
+</APPLET>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.2.1">connect</A></B>(const string &amp;foreignAddress, unsigned short foreignPort) throw(SocketException)
+<DD><I> Attempt to establish a socket connection with the given foreign address and port </I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.2.2">send</A></B>(const void* buffer, int bufferLen) throw(SocketException)
+<DD><I> Write the given buffer to this socket.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>int <B><A HREF="#DOC.2.3">recv</A></B>(void* buffer, int bufferLen) throw(SocketException)
+<DD><I> Read into the given buffer up to bufferLen bytes data from this socket.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>string <B><A HREF="#DOC.2.4">getForeignAddress</A></B>() throw(SocketException)
+<DD><I> Get the foreign address.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>unsigned short <B><A HREF="#DOC.2.5">getForeignPort</A></B>() throw(SocketException)
+<DD><I> Get the foreign port.</I>
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="Socket.html">Socket</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>string <B>getLocalAddress</B>() throw(SocketException)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>unsigned short <B>getLocalPort</B>() throw(SocketException)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>void <B>setLocalPort</B>(unsigned short localPort) throw(SocketException)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>void <B>setLocalAddressAndPort</B>(const string &amp;localAddress, unsigned short localPort = 0) throw(SocketException)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>static   void <B>cleanUp</B>() throw(SocketException)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>static   unsigned short <B>resolveService</B>(const string &amp;service, const string &amp;protocol = "tcp")
+</DL></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Socket which is able to connect, send, and receive</BLOCKQUOTE>
+<DL>
+
+<A NAME="connect"></A>
+<A NAME="DOC.2.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void connect(const string &amp;foreignAddress, unsigned short foreignPort) throw(SocketException)</B></TT>
+<DD>
+Attempt to establish a socket connection with the given foreign
+address and port
+
+<DL><DT><DT><B>Throws:</B><DD><B>SocketException</B>  thrown if unable to establish connection<BR><DT><B>Parameters:</B><DD><B>foreignAddress</B> -  foreign address (IP address or name)
+<BR><B>foreignPort</B> -  foreign port
+<BR><DT><B>Returns:</B><DD>  true if connection successfully established
+<BR><DD></DL><P>
+<A NAME="send"></A>
+<A NAME="DOC.2.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void send(const void* buffer, int bufferLen) throw(SocketException)</B></TT>
+<DD>
+Write the given buffer to this socket.  Call connect() before
+calling send()
+
+<DL><DT><DT><B>Throws:</B><DD><B>SocketException</B>  thrown if unable to send data<BR><DT><B>Parameters:</B><DD><B>buffer</B> -  buffer to be written
+<BR><B>bufferLen</B> -  number of bytes from buffer to be written
+<BR><DT><B>Returns:</B><DD>  true if the send is successful
+<BR><DD></DL><P>
+<A NAME="recv"></A>
+<A NAME="DOC.2.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int recv(void* buffer, int bufferLen) throw(SocketException)</B></TT>
+<DD>
+Read into the given buffer up to bufferLen bytes data from this
+socket.  Call connect() before calling recv()
+
+<DL><DT><DT><B>Throws:</B><DD><B>SocketException</B>  thrown if unable to receive data<BR><DT><B>Parameters:</B><DD><B>buffer</B> -  buffer to receive the data
+<BR><B>bufferLen</B> -  maximum number of bytes to read into buffer
+<BR><DT><B>Returns:</B><DD>  number of bytes read, 0 for EOF, and -1 for error
+<BR><DD></DL><P>
+<A NAME="getForeignAddress"></A>
+<A NAME="DOC.2.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>string getForeignAddress() throw(SocketException)</B></TT>
+<DD>
+Get the foreign address.  Call connect() before calling recv()
+
+<DL><DT><DT><B>Throws:</B><DD><B>SocketException</B>  thrown if unable to fetch foreign address<BR><DT><B>Returns:</B><DD>  foreign address
+<BR><DD></DL><P>
+<A NAME="getForeignPort"></A>
+<A NAME="DOC.2.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>unsigned short getForeignPort() throw(SocketException)</B></TT>
+<DD>
+Get the foreign port.  Call connect() before calling recv()
+
+<DL><DT><DT><B>Throws:</B><DD><B>SocketException</B>  thrown if unable to fetch foreign port<BR><DT><B>Returns:</B><DD>  foreign port
+<BR><DD></DL><P></DL>
+<HR>
+<DL><DT><B>Direct child classes:
+</B><DD><A HREF="UDPSocket.html">UDPSocket</A><BR>
+<A HREF="TCPSocket.html">TCPSocket</A><BR>
+</DL>
+
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

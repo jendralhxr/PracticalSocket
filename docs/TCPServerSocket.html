@@ -1,0 +1,103 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  TCPServerSocket</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>class  <A HREF="#DOC.DOCU">TCPServerSocket</A></H2></H2><BLOCKQUOTE> TCP socket class for servers</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=65>
+<param name=classes value="CSocket,MSocket.html,CTCPServerSocket,MTCPServerSocket.html">
+<param name=before value="M,M">
+<param name=after value="Md_,M">
+<param name=indent value="0,1">
+<param name=arrowdir value="down">
+</APPLET>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.4.1">TCPServerSocket</A></B>(unsigned short localPort, int queueLen = 5) throw(SocketException)
+<DD><I> Construct a TCP socket for use with a server, accepting connections on the specified port on any interface </I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.4.2">TCPServerSocket</A></B>(const string &amp;localAddress, unsigned short localPort, int queueLen = 5) throw(SocketException)
+<DD><I> Construct a TCP socket for use with a server, accepting connections on the specified port on the interface specified by the given address </I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="TCPSocket.html">TCPSocket</A>* <B><A HREF="#DOC.4.3">accept</A></B>() throw(SocketException)
+<DD><I> Blocks until a new connection is established on this socket or error </I>
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="Socket.html">Socket</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>string <B>getLocalAddress</B>() throw(SocketException)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>unsigned short <B>getLocalPort</B>() throw(SocketException)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>void <B>setLocalPort</B>(unsigned short localPort) throw(SocketException)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>void <B>setLocalAddressAndPort</B>(const string &amp;localAddress, unsigned short localPort = 0) throw(SocketException)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>static   void <B>cleanUp</B>() throw(SocketException)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>static   unsigned short <B>resolveService</B>(const string &amp;service, const string &amp;protocol = "tcp")
+</DL></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+TCP socket class for servers</BLOCKQUOTE>
+<DL>
+
+<A NAME="TCPServerSocket"></A>
+<A NAME="DOC.4.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> TCPServerSocket(unsigned short localPort, int queueLen = 5) throw(SocketException)</B></TT>
+<DD>
+Construct a TCP socket for use with a server, accepting connections
+on the specified port on any interface
+
+<DL><DT><DT><B>Throws:</B><DD><B>SocketException</B>  thrown if unable to create TCP server socket<BR><DT><B>Parameters:</B><DD><B>localPort</B> -  local port of server socket, a value of zero will
+give a system-assigned unused port
+<BR><B>queueLen</B> -  maximum queue length for outstanding 
+connection requests (default 5)
+<BR><DD></DL><P>
+<A NAME="TCPServerSocket"></A>
+<A NAME="DOC.4.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> TCPServerSocket(const string &amp;localAddress, unsigned short localPort, int queueLen = 5) throw(SocketException)</B></TT>
+<DD>
+Construct a TCP socket for use with a server, accepting connections
+on the specified port on the interface specified by the given address
+
+<DL><DT><DT><B>Throws:</B><DD><B>SocketException</B>  thrown if unable to create TCP server socket<BR><DT><B>Parameters:</B><DD><B>localAddress</B> -  local interface (address) of server socket
+<BR><B>localPort</B> -  local port of server socket
+<BR><B>queueLen</B> -  maximum queue length for outstanding 
+connection requests (default 5)
+<BR><DD></DL><P>
+<A NAME="accept"></A>
+<A NAME="DOC.4.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="TCPSocket.html">TCPSocket</A>* accept() throw(SocketException)</B></TT>
+<DD>
+Blocks until a new connection is established on this socket or error
+
+<DL><DT><DT><B>Throws:</B><DD><B>SocketException</B>  thrown if attempt to accept a new connection fails<BR><DT><B>Returns:</B><DD>  new connection socket
+<BR><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

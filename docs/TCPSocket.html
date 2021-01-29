@@ -1,0 +1,101 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  TCPSocket</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>class  <A HREF="#DOC.DOCU">TCPSocket</A></H2></H2><BLOCKQUOTE> TCP socket for communication with other TCP sockets</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=95>
+<param name=classes value="CSocket,MSocket.html,CCommunicatingSocket,MCommunicatingSocket.html,CTCPSocket,MTCPSocket.html">
+<param name=before value="M,M,M">
+<param name=after value="Md_SP,Md_,M">
+<param name=indent value="0,1,2">
+<param name=arrowdir value="down">
+</APPLET>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.3.1">TCPSocket</A></B>() throw(SocketException)
+<DD><I> Construct a TCP socket with no connection </I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.3.2">TCPSocket</A></B>(const string &amp;foreignAddress, unsigned short foreignPort) throw(SocketException)
+<DD><I> Construct a TCP socket with a connection to the given foreign address and port </I>
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="CommunicatingSocket.html">CommunicatingSocket</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>void <B>connect</B>(const string &amp;foreignAddress, unsigned short foreignPort) throw(SocketException)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>void <B>send</B>(const void* buffer, int bufferLen) throw(SocketException)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>int <B>recv</B>(void* buffer, int bufferLen) throw(SocketException)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>string <B>getForeignAddress</B>() throw(SocketException)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>unsigned short <B>getForeignPort</B>() throw(SocketException)
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="Socket.html">Socket</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>string <B>getLocalAddress</B>() throw(SocketException)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>unsigned short <B>getLocalPort</B>() throw(SocketException)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>void <B>setLocalPort</B>(unsigned short localPort) throw(SocketException)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>void <B>setLocalAddressAndPort</B>(const string &amp;localAddress, unsigned short localPort = 0) throw(SocketException)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>static   void <B>cleanUp</B>() throw(SocketException)
+<DT>
+<IMG ALT="o" SRC=icon2.gif>static   unsigned short <B>resolveService</B>(const string &amp;service, const string &amp;protocol = "tcp")
+</DL></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+TCP socket for communication with other TCP sockets</BLOCKQUOTE>
+<DL>
+
+<A NAME="TCPSocket"></A>
+<A NAME="DOC.3.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> TCPSocket() throw(SocketException)</B></TT>
+<DD>
+Construct a TCP socket with no connection
+
+<DL><DT><DT><B>Throws:</B><DD><B>SocketException</B>  thrown if unable to create TCP socket<BR><DD></DL><P>
+<A NAME="TCPSocket"></A>
+<A NAME="DOC.3.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> TCPSocket(const string &amp;foreignAddress, unsigned short foreignPort) throw(SocketException)</B></TT>
+<DD>
+Construct a TCP socket with a connection to the given foreign address
+and port
+
+<DL><DT><DT><B>Throws:</B><DD><B>SocketException</B>  thrown if unable to create TCP socket<BR><DT><B>Parameters:</B><DD><B>foreignAddress</B> -  foreign address (IP address or name)
+<BR><B>foreignPort</B> -  foreign port
+<BR><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Friends:</B><DD>  class <!1><A HREF="TCPServerSocket.html">TCPServerSocket</A><BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

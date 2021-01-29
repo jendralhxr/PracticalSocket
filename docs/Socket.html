@@ -1,0 +1,135 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  Socket</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H2>class  <A HREF="#DOC.DOCU">Socket</A></H2></H2><BLOCKQUOTE> Socket super class</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=95>
+<param name=classes value="CSocket,MSocket.html,CTCPServerSocket,MTCPServerSocket.html,CCommunicatingSocket,MCommunicatingSocket.html">
+<param name=before value="M,M|_,Mr_">
+<param name=after value="M,M,M">
+<param name=indent value="0,0,0">
+<param name=arrowdir value="down">
+</APPLET>
+<HR>
+
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.1">~Socket</A></B>()
+<DD><I> Close and deallocate this socket</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>string <B><A HREF="#DOC.1.2">getLocalAddress</A></B>() throw(SocketException)
+<DD><I> Get the local address </I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>unsigned short <B><A HREF="#DOC.1.3">getLocalPort</A></B>() throw(SocketException)
+<DD><I> Get the local port </I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.4">setLocalPort</A></B>(unsigned short localPort) throw(SocketException)
+<DD><I> Set the local port to the specified port and the local address to any interface </I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.1.5">setLocalAddressAndPort</A></B>(const string &amp;localAddress, unsigned short localPort = 0) throw(SocketException)
+<DD><I> Set the local port to the specified port and the local address to the specified address.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>static   void <B><A HREF="#DOC.1.6">cleanUp</A></B>() throw(SocketException)
+<DD><I> If WinSock, unload the WinSock DLLs; otherwise do nothing.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>static   unsigned short <B><A HREF="#DOC.1.7">resolveService</A></B>(const string &amp;service, const string &amp;protocol = "tcp")
+<DD><I> Resolve the specified service for the specified protocol to the corresponding port number in host byte order </I>
+</DL></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Socket super class</BLOCKQUOTE>
+<DL>
+
+<A NAME="~Socket"></A>
+<A NAME="DOC.1.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> ~Socket()</B></TT>
+<DD>
+Close and deallocate this socket
+<DL><DT><DD></DL><P>
+<A NAME="getLocalAddress"></A>
+<A NAME="DOC.1.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>string getLocalAddress() throw(SocketException)</B></TT>
+<DD>
+Get the local address
+
+<DL><DT><DT><B>Throws:</B><DD><B>SocketException</B>  thrown if fetch fails<BR><DT><B>Returns:</B><DD>  local address of socket
+<BR><DD></DL><P>
+<A NAME="getLocalPort"></A>
+<A NAME="DOC.1.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>unsigned short getLocalPort() throw(SocketException)</B></TT>
+<DD>
+Get the local port
+
+<DL><DT><DT><B>Throws:</B><DD><B>SocketException</B>  thrown if fetch fails<BR><DT><B>Returns:</B><DD>  local port of socket
+<BR><DD></DL><P>
+<A NAME="setLocalPort"></A>
+<A NAME="DOC.1.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void setLocalPort(unsigned short localPort) throw(SocketException)</B></TT>
+<DD>
+Set the local port to the specified port and the local address
+to any interface
+
+<DL><DT><DT><B>Throws:</B><DD><B>SocketException</B>  thrown if setting local port fails<BR><DT><B>Parameters:</B><DD><B>localPort</B> -  local port
+<BR><DD></DL><P>
+<A NAME="setLocalAddressAndPort"></A>
+<A NAME="DOC.1.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void setLocalAddressAndPort(const string &amp;localAddress, unsigned short localPort = 0) throw(SocketException)</B></TT>
+<DD>
+Set the local port to the specified port and the local address
+to the specified address.  If you omit the port, a random port 
+will be selected.
+
+<DL><DT><DT><B>Throws:</B><DD><B>SocketException</B>  thrown if setting local port or address fails<BR><DT><B>Parameters:</B><DD><B>localAddress</B> -  local address
+<BR><B>localPort</B> -  local port
+<BR><DD></DL><P>
+<A NAME="cleanUp"></A>
+<A NAME="DOC.1.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   void cleanUp() throw(SocketException)</B></TT>
+<DD>
+If WinSock, unload the WinSock DLLs; otherwise do nothing.  We ignore
+this in our sample client code but include it in the library for
+completeness.  If you are running on Windows and you are concerned
+about DLL resource consumption, call this after you are done with all
+Socket instances.  If you execute this on Windows while some instance of
+Socket exists, you are toast.  For portability of client code, this is 
+an empty function on non-Windows platforms so you can always include it.
+
+<DL><DT><DT><B>Throws:</B><DD><B>SocketException</B>  thrown WinSock clean up fails<BR><DT><B>Parameters:</B><DD><B>buffer</B> -  buffer to receive the data
+<BR><B>bufferLen</B> -  maximum number of bytes to read into buffer
+<BR><DT><B>Returns:</B><DD>  number of bytes read, 0 for EOF, and -1 for error
+<BR><DD></DL><P>
+<A NAME="resolveService"></A>
+<A NAME="DOC.1.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   unsigned short resolveService(const string &amp;service, const string &amp;protocol = "tcp")</B></TT>
+<DD>
+Resolve the specified service for the specified protocol to the
+corresponding port number in host byte order
+
+<DL><DT><DT><B>Parameters:</B><DD><B>service</B> -  service to resolve (e.g., "http")
+<BR><B>protocol</B> -  protocol of service to resolve.  Default is "tcp".<BR><DD></DL><P></DL>
+<HR>
+<DL><DT><B>Direct child classes:
+</B><DD><A HREF="TCPServerSocket.html">TCPServerSocket</A><BR>
+<A HREF="CommunicatingSocket.html">CommunicatingSocket</A><BR>
+</DL>
+
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>
