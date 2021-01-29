@@ -40,5 +40,5 @@ library in VC++:
 
 [martiege], [Tookmund], and I decided to work on the code a bit
 
-[martiege] https://github.com/martiege/PracticalSockets
-[Tookmund] https://github.com/Tookmund/PracticalSockets
+[martiege]: https://github.com/martiege/PracticalSockets
+[Tookmund]: https://github.com/Tookmund/PracticalSockets
