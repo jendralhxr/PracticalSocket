@@ -1,6 +1,8 @@
 /*
  *   C++ sockets on Unix and Windows
- *   Copyright (C) 2002
+ * 
+ *   Copyright Michael J. Donahoo (C) 2002
+ *   http://cs.ecs.baylor.edu/~donahoo/practical/CSockets/practical/
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU General Public License as published by
@@ -21,37 +23,8 @@
 #define __PRACTICALSOCKET_INCLUDED__
 
 #include <string>            // For string
-#include <exception>         // For exception class
 
 using namespace std;
-
-/**
- *   Signals a problem with the execution of a socket call.
- */
-class SocketException : public exception {
-public:
-  /**
-   *   Construct a SocketException with a explanatory message.
-   *   @param message explanatory message
-   *   @param incSysMsg true if system message (from strerror(errno))
-   *   should be postfixed to the user provided message
-   */
-  SocketException(const string &message, bool inclSysMsg = false) noexcept;
-
-  /**
-   *   Provided just to guarantee that no exceptions are thrown.
-   */
-  ~SocketException() noexcept;
-
-  /**
-   *   Get the exception message
-   *   @return exception message
-   */
-  const char* what() const noexcept;
-
-private:
-  string userMessage;  // Exception message
-};
 
 /**
  *   Base class representing basic communication endpoint
@@ -144,7 +117,7 @@ public:
    *   @exception SocketException thrown if unable to establish connection
    */
   void connect(const string &foreignAddress, unsigned short foreignPort)
-   ;
+    ;
 
   /**
    *   Write the given buffer to this socket.  Call connect() before
@@ -202,8 +175,7 @@ public:
    *   @param foreignPort foreign port
    *   @exception SocketException thrown if unable to create TCP socket
    */
-  TCPSocket(const string &foreignAddress, unsigned short foreignPort) 
-     ;
+  TCPSocket(const string &foreignAddress, unsigned short foreignPort);
 
 private:
   // Access for TCPServerSocket::accept() connection creation
@@ -225,8 +197,7 @@ public:
    *                   connection requests (default 5)
    *   @exception SocketException thrown if unable to create TCP server socket
    */
-  TCPServerSocket(unsigned short localPort, int queueLen = 5) 
-     ;
+  TCPServerSocket(unsigned short localPort, int queueLen = 5);
 
   /**
    *   Construct a TCP socket for use with a server, accepting connections
@@ -275,8 +246,7 @@ public:
    *   @param localPort local port
    *   @exception SocketException thrown if unable to create UDP socket
    */
-  UDPSocket(const string &localAddress, unsigned short localPort) 
-     ;
+  UDPSocket(const string &localAddress, unsigned short localPort);
 
   /**
    *   Unset foreign address and port
