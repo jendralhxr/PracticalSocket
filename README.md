@@ -36,6 +36,9 @@ library in VC++:
 5.  Copy the DLL to the appropriate spot, such as somewhere in the path
     or in the same directory as the executable.
 
-=======
+-----------------
 
-martiege, Tookmund, and I decided to work on the code a bit
+[martiege], [Tookmund], and I decided to work on the code a bit
+
+[martiege] https://github.com/martiege/PracticalSockets
+[Tookmund] https://github.com/Tookmund/PracticalSockets
