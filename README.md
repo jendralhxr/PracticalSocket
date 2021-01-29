@@ -1,6 +1,8 @@
 Practical C++ Sockets -- Unix/Windows compatible
 Copyright Michael J. Donahoo (C) 2002
+
 http://cs.ecs.baylor.edu/~donahoo/practical/CSockets/practical/
+
 -----------------
 
 Compilation Instructions:
@@ -35,4 +37,5 @@ library in VC++:
     or in the same directory as the executable.
 
 =======
+
 martiege, Tookmund, and I decided to work on the code a bit
