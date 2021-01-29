@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Practical C++ Sockets -- Unix/Windows compatible
 Copyright Michael J. Donahoo (C) 2002
 http://cs.ecs.baylor.edu/~donahoo/practical/CSockets/practical/
@@ -34,9 +33,6 @@ library in VC++:
 4.  Finish setting up your project.
 5.  Copy the DLL to the appropriate spot, such as somewhere in the path
     or in the same directory as the executable.
-=======
-## Practical Socket
-This is an updated version of the [PracticalSocket class](http://cs.ecs.baylor.edu/~donahoo/practical/CSockets/practical/), to work with the updated exception syntax of C++11. 
 
-It is not my work, and any use should refer to the original creator. 
->>>>>>> 46eb449... Initialized
+=======
+martiege, Tookmund, and I decided to work on the code a bit
